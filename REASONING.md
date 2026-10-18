@@ -31,25 +31,26 @@ The type that typeof() gives  is integer instead of characters, because factor a
 The top-level elements here are two, namely scores and label, thus it has a length of 2. R’s list can have components of different types, so typeof() will just return “list”. Hence, the value is list{scores=[3, 5],label=["A"]} with length 2 and no dimensions.
 
 ## P09
-Replace this line with the rule that decides this case.
+data.frame is a list of columns(id) x list of rows(passed), so typeof is list and length is 2. Dimensions are 2 rows x 2 columns since each column has two elements. Thus, dim is 2x2.
 
 ## P10
-Replace this line with the rule that decides this case.
+Matrix is stored by columns, so `matrix(1:6, nrow = 2L) holds 1,2,3,4,5,6. Since nrow = 2, add the first 2 elements with their corresponding order in the second vector. Recycle rule in c(10L,20L) adds 10 and 20 to elements alternately; add 10 to 1,3,5 and add 20 to 2,4,6.
 
 ## P11
-Replace this line with the rule that decides this case.
+Using a mean with an argument of NA by itself alone returns NA, a special case with length 1. Annihilating the other values and deeming them irrelevant since NA overrides. Therefore, [NA] is the result, with length 1 and no dimensions.
 
 ## P12
-Replace this line with the rule that decides this case.
+Since this time na.rm = TRUE(ignores missing values; na.rm = FALSE by default)
+It technically becomes quote(mean(c(8,9))). Type is double to avoid precision loss, generalized for all cases, even when the mean should’ve been an int.
 
 ## P13
-Replace this line with the rule that decides this case.
+Reassigning a double value type to index 2(R is 1-indexed) changes the other values to double due to coercion from int >double. Mixed-mode assignment widens the vector to double to accommodate the reassignment. This also makes the other values double with length 3 and no dimensions.
 
 ## P14
-Replace this line with the rule that decides this case.
+is.na(scores) returns FALSE, TRUE, FALSE, TRUE. If true, set the value to 0; otherwise, double it. And for those values greater than 15, set their value to 15, giving [1,2.5,3], type double, length 3, no dimensions.
 
 ## P15
-Replace this line with the rule that decides this case.
+An array of atomic vector with dim as its attribute. 1:8 indicates the type, which is an integer of length 8, and the c(2L,2L,2L) shows how it is being stored. Thus, the dim is 2x2x2.
 
 ## P16
-Replace this line with the rule that decides this case.
+R is 1-indexed, so selecting an integer from that vector returns a zero-length vector with the original type, integer. 
