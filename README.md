@@ -7,7 +7,7 @@ Problem Set 2. The assignment manual defines the work and the submission rules.
 ## Pair
 
 - Rose Antonette Kaindoy (`rskaindoy`)
-- Full Name (`username`)
+- Adrian Moser (`AdrianMoser1`)
   
 ## Layout
 
